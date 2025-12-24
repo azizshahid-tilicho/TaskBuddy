@@ -13,6 +13,7 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
+        android:maxLines="1"
         android:text="Learn ViewModel basics"
         android:textSize="23dp"
         android:textStyle="bold" />
@@ -32,8 +33,9 @@
             android:layout_below="@+id/tvName"
             android:layout_weight="1"
             android:gravity="start"
+            android:maxLines="2"
             android:text="Watch Andriod ViewModel videos and read docs"
-            android:textSize="22dp" />
+            android:textSize="22sp" />
 
         <CheckBox
             android:id="@+id/checkBox"

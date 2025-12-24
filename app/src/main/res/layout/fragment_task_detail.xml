@@ -80,19 +80,22 @@
             android:layout_marginTop="30dp"/>
         <TextView
             android:id="@+id/tvPriorityDetail"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@+id/tvDueDateDetail"
             android:text="LOW"
+            android:background="@drawable/rounded_corners"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:paddingHorizontal="10dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             />
 
         <LinearLayout
             android:id="@+id/linearCompletedDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@+id/tvDueDateDetail"
+            app:layout_constraintTop_toBottomOf="@+id/tvPriorityDetail"
             app:layout_constraintStart_toStartOf="parent"
             android:layout_marginTop="20dp"
             >
@@ -112,11 +115,12 @@
                 />
         </LinearLayout>
         <Button
+            android:id="@+id/btnMark"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintTop_toBottomOf="@id/linearCompletedDetail"
             android:backgroundTint="@color/color_background_blue"
-            android:text="Mark as Completed"
+            android:text="Update Status"
             android:textSize="20sp"
             android:layout_marginTop="20dp"
             android:paddingVertical="10dp"

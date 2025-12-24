@@ -153,6 +153,7 @@ class TaskListFragment : Fragment() {
 
             val items = entities.map{
                 TaskItem(
+                    taskId = it.id,
                     taskName = it.title,
                     taskDescription = it.description,
                     dueDate = it.dueDate,
