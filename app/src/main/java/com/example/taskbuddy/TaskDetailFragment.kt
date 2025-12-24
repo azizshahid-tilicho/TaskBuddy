@@ -87,7 +87,7 @@ class TaskDetailFragment : Fragment() {
                     putLong(ARG_ID, task.taskId)
                     putString(ARG_TITLE, task.taskName)
                     putString(ARG_DESCRIPTION, task.taskDescription)
-                    putString(ARG_DUE_DATE, task.dueDate)
+                    task.dueDate?.let { putLong(ARG_DUE_DATE, it) }
                     putString(ARG_PRIORITY, task.priority)
                     putBoolean(ARG_ISCOMPLETED, task.isCompleted)
                 }

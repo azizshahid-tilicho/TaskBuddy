@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
         //Uncomment this when you want to delete the table in the database
-//        clearDatabase()
+        clearDatabase()
     }
     private fun clearDatabase(){
         val db = TaskDataBase.getInstance(this)

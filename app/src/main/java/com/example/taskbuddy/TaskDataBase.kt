@@ -7,7 +7,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 
 //Marks this class a room database
-@Database(entities = [TaskEntity::class], version = 1)
+@Database(entities = [TaskEntity::class], version = 2)
 
 
 abstract class TaskDataBase :RoomDatabase(){
@@ -29,7 +29,7 @@ abstract class TaskDataBase :RoomDatabase(){
                     context.applicationContext,
                     TaskDataBase::class.java,
                     "task_db"
-                ).build().also { INSTANCE = it }
+                ).fallbackToDestructiveMigration().build().also { INSTANCE = it }
             }
     }
 }

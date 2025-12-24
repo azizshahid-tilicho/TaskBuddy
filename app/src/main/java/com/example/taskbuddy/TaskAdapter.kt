@@ -27,7 +27,7 @@ class TaskAdapter(private val context: Context, private var taskList: List<TaskI
 
         holder.taskName.text = taskItem.taskName
         holder.taskDescription.text = taskItem.taskDescription
-        holder.dueDate.text = taskItem.dueDate
+        holder.dueDate.text = taskItem.dueDate.toString()
         holder.priority.text = taskItem.priority
         holder.isCompleted.isChecked = taskItem.isCompleted
         val priorityColor = when(taskItem.priority) {
